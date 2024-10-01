@@ -1,0 +1,25 @@
+1.1) "String..." représente la liste des modèles qu'on souhaite vérifier, liste de noms de fichiers
+On récupère le modèle avec un objet URI où on lui passe le lien du fichier, puis un objet "Resource" qui récupère le modèle de l'objet URI
+
+1.2) ValidationResult 
+recordError
+recordIfFailed
+getRecordedErrors
+getRecordedErrorsFor( int ou Eclass )
+
+1.3) Selon la classe de l'objet étudié, le renvoie vers la bonne vérification
+
+1.4)
+Vérifications déjà faite : Process ( nom conforme ), WorkDefinition ( nom unique ), WorkSequence ( predecesseur et successeur different )
+Lors de la vérification sur le Process, on appelle la vérification sur les ProcessElement
+
+
+Ex2:
+count -> retourne le nombre d'éléments dans le stream
+sum, min, max -> renvoie la valeur associée
+empty -> retourne un stream vide
+findFirst -> retourne un "optional" ( objet contenant une valeur ou non ) du premier element du stream
+allMatch -> retourne boolean si tout les elements du stream valident au predicat
+anyMatch -> pareil seulement si au moins un des elements
+noneMatch -> pareil si aucun element valide le predicat
+toList -> tranfsorme un stream en liste
