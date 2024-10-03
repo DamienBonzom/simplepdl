@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link simplepdl.WorkDefinition#getLinksToPredecessors <em>Links To Predecessors</em>}</li>
  *   <li>{@link simplepdl.WorkDefinition#getLinksToSuccessors <em>Links To Successors</em>}</li>
  *   <li>{@link simplepdl.WorkDefinition#getName <em>Name</em>}</li>
+ *   <li>{@link simplepdl.WorkDefinition#getGestionressource <em>Gestionressource</em>}</li>
  * </ul>
  *
  * @see simplepdl.SimplepdlPackage#getWorkDefinition()
@@ -72,5 +73,27 @@ public interface WorkDefinition extends ProcessElement {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Gestionressource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Gestionressource</em>' reference.
+	 * @see #setGestionressource(GestionRessources)
+	 * @see simplepdl.SimplepdlPackage#getWorkDefinition_Gestionressource()
+	 * @model required="true"
+	 * @generated
+	 */
+	GestionRessources getGestionressource();
+
+	/**
+	 * Sets the value of the '{@link simplepdl.WorkDefinition#getGestionressource <em>Gestionressource</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Gestionressource</em>' reference.
+	 * @see #getGestionressource()
+	 * @generated
+	 */
+	void setGestionressource(GestionRessources value);
 
 } // WorkDefinition

@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import simplepdl.GestionRessources;
 import simplepdl.SimplepdlPackage;
 import simplepdl.WorkDefinition;
 import simplepdl.WorkSequence;
@@ -32,6 +33,7 @@ import simplepdl.WorkSequence;
  *   <li>{@link simplepdl.impl.WorkDefinitionImpl#getLinksToPredecessors <em>Links To Predecessors</em>}</li>
  *   <li>{@link simplepdl.impl.WorkDefinitionImpl#getLinksToSuccessors <em>Links To Successors</em>}</li>
  *   <li>{@link simplepdl.impl.WorkDefinitionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link simplepdl.impl.WorkDefinitionImpl#getGestionressource <em>Gestionressource</em>}</li>
  * </ul>
  *
  * @generated
@@ -76,6 +78,16 @@ public class WorkDefinitionImpl extends ProcessElementImpl implements WorkDefini
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getGestionressource() <em>Gestionressource</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGestionressource()
+	 * @generated
+	 * @ordered
+	 */
+	protected GestionRessources gestionressource;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -150,6 +162,46 @@ public class WorkDefinitionImpl extends ProcessElementImpl implements WorkDefini
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public GestionRessources getGestionressource() {
+		if (gestionressource != null && gestionressource.eIsProxy()) {
+			InternalEObject oldGestionressource = (InternalEObject)gestionressource;
+			gestionressource = (GestionRessources)eResolveProxy(oldGestionressource);
+			if (gestionressource != oldGestionressource) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SimplepdlPackage.WORK_DEFINITION__GESTIONRESSOURCE, oldGestionressource, gestionressource));
+			}
+		}
+		return gestionressource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GestionRessources basicGetGestionressource() {
+		return gestionressource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setGestionressource(GestionRessources newGestionressource) {
+		GestionRessources oldGestionressource = gestionressource;
+		gestionressource = newGestionressource;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SimplepdlPackage.WORK_DEFINITION__GESTIONRESSOURCE, oldGestionressource, gestionressource));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -192,6 +244,9 @@ public class WorkDefinitionImpl extends ProcessElementImpl implements WorkDefini
 				return getLinksToSuccessors();
 			case SimplepdlPackage.WORK_DEFINITION__NAME:
 				return getName();
+			case SimplepdlPackage.WORK_DEFINITION__GESTIONRESSOURCE:
+				if (resolve) return getGestionressource();
+				return basicGetGestionressource();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -216,6 +271,9 @@ public class WorkDefinitionImpl extends ProcessElementImpl implements WorkDefini
 			case SimplepdlPackage.WORK_DEFINITION__NAME:
 				setName((String)newValue);
 				return;
+			case SimplepdlPackage.WORK_DEFINITION__GESTIONRESSOURCE:
+				setGestionressource((GestionRessources)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -237,6 +295,9 @@ public class WorkDefinitionImpl extends ProcessElementImpl implements WorkDefini
 			case SimplepdlPackage.WORK_DEFINITION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case SimplepdlPackage.WORK_DEFINITION__GESTIONRESSOURCE:
+				setGestionressource((GestionRessources)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -255,6 +316,8 @@ public class WorkDefinitionImpl extends ProcessElementImpl implements WorkDefini
 				return linksToSuccessors != null && !linksToSuccessors.isEmpty();
 			case SimplepdlPackage.WORK_DEFINITION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case SimplepdlPackage.WORK_DEFINITION__GESTIONRESSOURCE:
+				return gestionressource != null;
 		}
 		return super.eIsSet(featureID);
 	}

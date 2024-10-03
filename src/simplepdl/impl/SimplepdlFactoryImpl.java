@@ -11,7 +11,9 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
+import simplepdl.GestionRessources;
 import simplepdl.Guidance;
+import simplepdl.Ressource;
 import simplepdl.SimplepdlFactory;
 import simplepdl.SimplepdlPackage;
 import simplepdl.WorkDefinition;
@@ -66,6 +68,8 @@ public class SimplepdlFactoryImpl extends EFactoryImpl implements SimplepdlFacto
 			case SimplepdlPackage.WORK_DEFINITION: return createWorkDefinition();
 			case SimplepdlPackage.WORK_SEQUENCE: return createWorkSequence();
 			case SimplepdlPackage.GUIDANCE: return createGuidance();
+			case SimplepdlPackage.GESTION_RESSOURCES: return createGestionRessources();
+			case SimplepdlPackage.RESSOURCE: return createRessource();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -143,6 +147,28 @@ public class SimplepdlFactoryImpl extends EFactoryImpl implements SimplepdlFacto
 	public Guidance createGuidance() {
 		GuidanceImpl guidance = new GuidanceImpl();
 		return guidance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public GestionRessources createGestionRessources() {
+		GestionRessourcesImpl gestionRessources = new GestionRessourcesImpl();
+		return gestionRessources;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Ressource createRessource() {
+		RessourceImpl ressource = new RessourceImpl();
+		return ressource;
 	}
 
 	/**

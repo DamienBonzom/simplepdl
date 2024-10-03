@@ -7,8 +7,10 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
+import simplepdl.GestionRessources;
 import simplepdl.Guidance;
 import simplepdl.ProcessElement;
+import simplepdl.Ressource;
 import simplepdl.SimplepdlPackage;
 import simplepdl.WorkDefinition;
 import simplepdl.WorkSequence;
@@ -103,6 +105,20 @@ public class SimplepdlSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case SimplepdlPackage.GESTION_RESSOURCES: {
+				GestionRessources gestionRessources = (GestionRessources)theEObject;
+				T result = caseGestionRessources(gestionRessources);
+				if (result == null) result = caseProcessElement(gestionRessources);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SimplepdlPackage.RESSOURCE: {
+				Ressource ressource = (Ressource)theEObject;
+				T result = caseRessource(ressource);
+				if (result == null) result = caseProcessElement(ressource);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -179,6 +195,36 @@ public class SimplepdlSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGuidance(Guidance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Gestion Ressources</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Gestion Ressources</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGestionRessources(GestionRessources object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ressource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ressource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRessource(Ressource object) {
 		return null;
 	}
 
