@@ -2,18 +2,13 @@
  */
 package simplepdl.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import simplepdl.GestionRessources;
 import simplepdl.Ressource;
 import simplepdl.SimplepdlPackage;
@@ -28,11 +23,12 @@ import simplepdl.SimplepdlPackage;
  * <ul>
  *   <li>{@link simplepdl.impl.GestionRessourcesImpl#getQuantite <em>Quantite</em>}</li>
  *   <li>{@link simplepdl.impl.GestionRessourcesImpl#getRessources <em>Ressources</em>}</li>
+ *   <li>{@link simplepdl.impl.GestionRessourcesImpl#isUtilisee <em>Utilisee</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GestionRessourcesImpl extends ProcessElementImpl implements GestionRessources {
+public class GestionRessourcesImpl extends MinimalEObjectImpl.Container implements GestionRessources {
 	/**
 	 * The default value of the '{@link #getQuantite() <em>Quantite</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -54,14 +50,34 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 	protected int quantite = QUANTITE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRessources() <em>Ressources</em>}' reference list.
+	 * The cached value of the '{@link #getRessources() <em>Ressources</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRessources()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Ressource> ressources;
+	protected Ressource ressources;
+
+	/**
+	 * The default value of the '{@link #isUtilisee() <em>Utilisee</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUtilisee()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean UTILISEE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isUtilisee() <em>Utilisee</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isUtilisee()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean utilisee = UTILISEE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,11 +127,61 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 	 * @generated
 	 */
 	@Override
-	public EList<Ressource> getRessources() {
-		if (ressources == null) {
-			ressources = new EObjectResolvingEList<Ressource>(Ressource.class, this, SimplepdlPackage.GESTION_RESSOURCES__RESSOURCES);
+	public Ressource getRessources() {
+		if (ressources != null && ressources.eIsProxy()) {
+			InternalEObject oldRessources = (InternalEObject)ressources;
+			ressources = (Ressource)eResolveProxy(oldRessources);
+			if (ressources != oldRessources) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SimplepdlPackage.GESTION_RESSOURCES__RESSOURCES, oldRessources, ressources));
+			}
 		}
 		return ressources;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Ressource basicGetRessources() {
+		return ressources;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setRessources(Ressource newRessources) {
+		Ressource oldRessources = ressources;
+		ressources = newRessources;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SimplepdlPackage.GESTION_RESSOURCES__RESSOURCES, oldRessources, ressources));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isUtilisee() {
+		return utilisee;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUtilisee(boolean newUtilisee) {
+		boolean oldUtilisee = utilisee;
+		utilisee = newUtilisee;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SimplepdlPackage.GESTION_RESSOURCES__UTILISEE, oldUtilisee, utilisee));
 	}
 
 	/**
@@ -129,7 +195,10 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 			case SimplepdlPackage.GESTION_RESSOURCES__QUANTITE:
 				return getQuantite();
 			case SimplepdlPackage.GESTION_RESSOURCES__RESSOURCES:
-				return getRessources();
+				if (resolve) return getRessources();
+				return basicGetRessources();
+			case SimplepdlPackage.GESTION_RESSOURCES__UTILISEE:
+				return isUtilisee();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -147,8 +216,10 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 				setQuantite((Integer)newValue);
 				return;
 			case SimplepdlPackage.GESTION_RESSOURCES__RESSOURCES:
-				getRessources().clear();
-				getRessources().addAll((Collection<? extends Ressource>)newValue);
+				setRessources((Ressource)newValue);
+				return;
+			case SimplepdlPackage.GESTION_RESSOURCES__UTILISEE:
+				setUtilisee((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -166,7 +237,10 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 				setQuantite(QUANTITE_EDEFAULT);
 				return;
 			case SimplepdlPackage.GESTION_RESSOURCES__RESSOURCES:
-				getRessources().clear();
+				setRessources((Ressource)null);
+				return;
+			case SimplepdlPackage.GESTION_RESSOURCES__UTILISEE:
+				setUtilisee(UTILISEE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -183,7 +257,9 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 			case SimplepdlPackage.GESTION_RESSOURCES__QUANTITE:
 				return quantite != QUANTITE_EDEFAULT;
 			case SimplepdlPackage.GESTION_RESSOURCES__RESSOURCES:
-				return ressources != null && !ressources.isEmpty();
+				return ressources != null;
+			case SimplepdlPackage.GESTION_RESSOURCES__UTILISEE:
+				return utilisee != UTILISEE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -200,6 +276,8 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (quantite: ");
 		result.append(quantite);
+		result.append(", utilisee: ");
+		result.append(utilisee);
 		result.append(')');
 		return result.toString();
 	}

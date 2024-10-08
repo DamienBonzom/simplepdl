@@ -2,7 +2,7 @@
  */
 package simplepdl;
 
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,13 +15,14 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link simplepdl.GestionRessources#getQuantite <em>Quantite</em>}</li>
  *   <li>{@link simplepdl.GestionRessources#getRessources <em>Ressources</em>}</li>
+ *   <li>{@link simplepdl.GestionRessources#isUtilisee <em>Utilisee</em>}</li>
  * </ul>
  *
  * @see simplepdl.SimplepdlPackage#getGestionRessources()
  * @model
  * @generated
  */
-public interface GestionRessources extends ProcessElement {
+public interface GestionRessources extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Quantite</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -45,15 +46,47 @@ public interface GestionRessources extends ProcessElement {
 	void setQuantite(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Ressources</b></em>' reference list.
-	 * The list contents are of type {@link simplepdl.Ressource}.
+	 * Returns the value of the '<em><b>Ressources</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ressources</em>' reference list.
+	 * @return the value of the '<em>Ressources</em>' reference.
+	 * @see #setRessources(Ressource)
 	 * @see simplepdl.SimplepdlPackage#getGestionRessources_Ressources()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<Ressource> getRessources();
+	Ressource getRessources();
+
+	/**
+	 * Sets the value of the '{@link simplepdl.GestionRessources#getRessources <em>Ressources</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ressources</em>' reference.
+	 * @see #getRessources()
+	 * @generated
+	 */
+	void setRessources(Ressource value);
+
+	/**
+	 * Returns the value of the '<em><b>Utilisee</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Utilisee</em>' attribute.
+	 * @see #setUtilisee(boolean)
+	 * @see simplepdl.SimplepdlPackage#getGestionRessources_Utilisee()
+	 * @model required="true"
+	 * @generated
+	 */
+	boolean isUtilisee();
+
+	/**
+	 * Sets the value of the '{@link simplepdl.GestionRessources#isUtilisee <em>Utilisee</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Utilisee</em>' attribute.
+	 * @see #isUtilisee()
+	 * @generated
+	 */
+	void setUtilisee(boolean value);
 
 } // GestionRessources

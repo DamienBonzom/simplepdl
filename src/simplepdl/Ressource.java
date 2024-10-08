@@ -13,6 +13,7 @@ package simplepdl;
  * </p>
  * <ul>
  *   <li>{@link simplepdl.Ressource#getName <em>Name</em>}</li>
+ *   <li>{@link simplepdl.Ressource#getQuantite <em>Quantite</em>}</li>
  * </ul>
  *
  * @see simplepdl.SimplepdlPackage#getRessource()
@@ -41,5 +42,27 @@ public interface Ressource extends ProcessElement {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Quantite</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Quantite</em>' attribute.
+	 * @see #setQuantite(int)
+	 * @see simplepdl.SimplepdlPackage#getRessource_Quantite()
+	 * @model required="true"
+	 * @generated
+	 */
+	int getQuantite();
+
+	/**
+	 * Sets the value of the '{@link simplepdl.Ressource#getQuantite <em>Quantite</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Quantite</em>' attribute.
+	 * @see #getQuantite()
+	 * @generated
+	 */
+	void setQuantite(int value);
 
 } // Ressource

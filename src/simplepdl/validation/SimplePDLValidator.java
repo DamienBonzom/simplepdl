@@ -3,8 +3,10 @@ package simplepdl.validation;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 
+import simplepdl.GestionRessources;
 import simplepdl.Guidance;
 import simplepdl.ProcessElement;
+import simplepdl.Ressource;
 import simplepdl.SimplepdlPackage;
 import simplepdl.WorkDefinition;
 import simplepdl.WorkSequence;
@@ -154,6 +156,46 @@ public class SimplePDLValidator extends SimplepdlSwitch<Boolean> {
 				object.getText() != null, 
 				object, 
 				"Une guidance ne peut pas avoir un texte vide.");
+		return null;
+	}
+	
+	/**
+	 * Méthode appelée lorsque l'objet visité est un gestionressource
+	 * @param object élément visité
+	 * @return résultat de validation (null ici, ce qui permet de poursuivre la visite
+	 * vers les classes parentes, le cas échéant)
+	 */
+	@Override
+	public Boolean caseGestionRessources(GestionRessources object) {
+		//contrainte sur la quantite de ressources utilisées
+		this.result.recordIfFailed(
+				object.getQuantite() > 0, 
+				object, 
+				"Une gestion de ressource doit gérer au minimum une ressource");
+		return null;
+	}
+	
+	
+	/**
+	 * Méthode appelée lorsque l'objet visité est un gestionressource
+	 * @param object élément visité
+	 * @return résultat de validation (null ici, ce qui permet de poursuivre la visite
+	 * vers les classes parentes, le cas échéant)
+	 */
+	@Override
+	public Boolean caseRessource(Ressource object) {
+		//contrainte sur le nom de ressource
+		this.result.recordIfFailed(
+				object.getName() != null || object.getName().matches(IDENT_REGEX), 
+				object, 
+				"Une gestion de ressource doit gérer au minimum une ressource");
+		
+		//contrainte sur le nom de ressource
+		this.result.recordIfFailed(
+				object.getQuantite() > 0, 
+				object, 
+				"Une ressource ne peut pas être de quantité nulle");
+		
 		return null;
 	}
 

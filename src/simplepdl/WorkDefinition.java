@@ -75,25 +75,15 @@ public interface WorkDefinition extends ProcessElement {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Gestionressource</b></em>' reference.
+	 * Returns the value of the '<em><b>Gestionressource</b></em>' containment reference list.
+	 * The list contents are of type {@link simplepdl.GestionRessources}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Gestionressource</em>' reference.
-	 * @see #setGestionressource(GestionRessources)
+	 * @return the value of the '<em>Gestionressource</em>' containment reference list.
 	 * @see simplepdl.SimplepdlPackage#getWorkDefinition_Gestionressource()
-	 * @model required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
-	GestionRessources getGestionressource();
-
-	/**
-	 * Sets the value of the '{@link simplepdl.WorkDefinition#getGestionressource <em>Gestionressource</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Gestionressource</em>' reference.
-	 * @see #getGestionressource()
-	 * @generated
-	 */
-	void setGestionressource(GestionRessources value);
+	EList<GestionRessources> getGestionressource();
 
 } // WorkDefinition

@@ -20,6 +20,7 @@ import simplepdl.SimplepdlPackage;
  * </p>
  * <ul>
  *   <li>{@link simplepdl.impl.RessourceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link simplepdl.impl.RessourceImpl#getQuantite <em>Quantite</em>}</li>
  * </ul>
  *
  * @generated
@@ -44,6 +45,26 @@ public class RessourceImpl extends ProcessElementImpl implements Ressource {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getQuantite() <em>Quantite</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuantite()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int QUANTITE_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getQuantite() <em>Quantite</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuantite()
+	 * @generated
+	 * @ordered
+	 */
+	protected int quantite = QUANTITE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -93,10 +114,35 @@ public class RessourceImpl extends ProcessElementImpl implements Ressource {
 	 * @generated
 	 */
 	@Override
+	public int getQuantite() {
+		return quantite;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setQuantite(int newQuantite) {
+		int oldQuantite = quantite;
+		quantite = newQuantite;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SimplepdlPackage.RESSOURCE__QUANTITE, oldQuantite, quantite));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case SimplepdlPackage.RESSOURCE__NAME:
 				return getName();
+			case SimplepdlPackage.RESSOURCE__QUANTITE:
+				return getQuantite();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,6 +157,9 @@ public class RessourceImpl extends ProcessElementImpl implements Ressource {
 		switch (featureID) {
 			case SimplepdlPackage.RESSOURCE__NAME:
 				setName((String)newValue);
+				return;
+			case SimplepdlPackage.RESSOURCE__QUANTITE:
+				setQuantite((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -127,6 +176,9 @@ public class RessourceImpl extends ProcessElementImpl implements Ressource {
 			case SimplepdlPackage.RESSOURCE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case SimplepdlPackage.RESSOURCE__QUANTITE:
+				setQuantite(QUANTITE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -141,6 +193,8 @@ public class RessourceImpl extends ProcessElementImpl implements Ressource {
 		switch (featureID) {
 			case SimplepdlPackage.RESSOURCE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case SimplepdlPackage.RESSOURCE__QUANTITE:
+				return quantite != QUANTITE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -157,6 +211,8 @@ public class RessourceImpl extends ProcessElementImpl implements Ressource {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", quantite: ");
+		result.append(quantite);
 		result.append(')');
 		return result.toString();
 	}
