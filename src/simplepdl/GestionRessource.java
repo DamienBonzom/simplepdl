@@ -2,39 +2,40 @@
  */
 package simplepdl;
 
+
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Gestion Ressources</b></em>'.
+ * A representation of the model object '<em><b>Gestion Ressource</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link simplepdl.GestionRessources#getQuantite <em>Quantite</em>}</li>
- *   <li>{@link simplepdl.GestionRessources#getRessources <em>Ressources</em>}</li>
- *   <li>{@link simplepdl.GestionRessources#isUtilisee <em>Utilisee</em>}</li>
+ *   <li>{@link simplepdl.GestionRessource#getQuantite <em>Quantite</em>}</li>
+ *   <li>{@link simplepdl.GestionRessource#getRessource <em>Ressource</em>}</li>
+ *   <li>{@link simplepdl.GestionRessource#isUtilisee <em>Utilisee</em>}</li>
  * </ul>
  *
- * @see simplepdl.SimplepdlPackage#getGestionRessources()
+ * @see simplepdl.SimplepdlPackage#getGestionRessource()
  * @model
  * @generated
  */
-public interface GestionRessources extends ProcessElement {
+public interface GestionRessource extends ProcessElement {
 	/**
 	 * Returns the value of the '<em><b>Quantite</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Quantite</em>' attribute.
 	 * @see #setQuantite(int)
-	 * @see simplepdl.SimplepdlPackage#getGestionRessources_Quantite()
+	 * @see simplepdl.SimplepdlPackage#getGestionRessource_Quantite()
 	 * @model required="true"
 	 * @generated
 	 */
 	int getQuantite();
 
 	/**
-	 * Sets the value of the '{@link simplepdl.GestionRessources#getQuantite <em>Quantite</em>}' attribute.
+	 * Sets the value of the '{@link simplepdl.GestionRessource#getQuantite <em>Quantite</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Quantite</em>' attribute.
@@ -44,26 +45,26 @@ public interface GestionRessources extends ProcessElement {
 	void setQuantite(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Ressources</b></em>' reference.
+	 * Returns the value of the '<em><b>Ressource</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ressources</em>' reference.
-	 * @see #setRessources(Ressource)
-	 * @see simplepdl.SimplepdlPackage#getGestionRessources_Ressources()
+	 * @return the value of the '<em>Ressource</em>' reference.
+	 * @see #setRessource(Ressource)
+	 * @see simplepdl.SimplepdlPackage#getGestionRessource_Ressource()
 	 * @model required="true"
 	 * @generated
 	 */
-	Ressource getRessources();
+	Ressource getRessource();
 
 	/**
-	 * Sets the value of the '{@link simplepdl.GestionRessources#getRessources <em>Ressources</em>}' reference.
+	 * Sets the value of the '{@link simplepdl.GestionRessource#getRessource <em>Ressource</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ressources</em>' reference.
-	 * @see #getRessources()
+	 * @param value the new value of the '<em>Ressource</em>' reference.
+	 * @see #getRessource()
 	 * @generated
 	 */
-	void setRessources(Ressource value);
+	void setRessource(Ressource value);
 
 	/**
 	 * Returns the value of the '<em><b>Utilisee</b></em>' attribute.
@@ -71,14 +72,14 @@ public interface GestionRessources extends ProcessElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Utilisee</em>' attribute.
 	 * @see #setUtilisee(boolean)
-	 * @see simplepdl.SimplepdlPackage#getGestionRessources_Utilisee()
+	 * @see simplepdl.SimplepdlPackage#getGestionRessource_Utilisee()
 	 * @model required="true"
 	 * @generated
 	 */
 	boolean isUtilisee();
 
 	/**
-	 * Sets the value of the '{@link simplepdl.GestionRessources#isUtilisee <em>Utilisee</em>}' attribute.
+	 * Sets the value of the '{@link simplepdl.GestionRessource#isUtilisee <em>Utilisee</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Utilisee</em>' attribute.
@@ -87,4 +88,4 @@ public interface GestionRessources extends ProcessElement {
 	 */
 	void setUtilisee(boolean value);
 
-} // GestionRessources
+} // GestionRessource

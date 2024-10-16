@@ -9,7 +9,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import simplepdl.GestionRessources;
+import simplepdl.GestionRessource;
 import simplepdl.Guidance;
 import simplepdl.ProcessElement;
 import simplepdl.Ressource;
@@ -94,8 +94,8 @@ public class SimplepdlAdapterFactory extends AdapterFactoryImpl {
 				return createGuidanceAdapter();
 			}
 			@Override
-			public Adapter caseGestionRessources(GestionRessources object) {
-				return createGestionRessourcesAdapter();
+			public Adapter caseGestionRessource(GestionRessource object) {
+				return createGestionRessourceAdapter();
 			}
 			@Override
 			public Adapter caseRessource(Ressource object) {
@@ -192,16 +192,16 @@ public class SimplepdlAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link simplepdl.GestionRessources <em>Gestion Ressources</em>}'.
+	 * Creates a new adapter for an object of class '{@link simplepdl.GestionRessource <em>Gestion Ressource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see simplepdl.GestionRessources
+	 * @see simplepdl.GestionRessource
 	 * @generated
 	 */
-	public Adapter createGestionRessourcesAdapter() {
+	public Adapter createGestionRessourceAdapter() {
 		return null;
 	}
 

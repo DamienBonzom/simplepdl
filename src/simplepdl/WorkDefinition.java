@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link simplepdl.WorkDefinition#getLinksToPredecessors <em>Links To Predecessors</em>}</li>
  *   <li>{@link simplepdl.WorkDefinition#getLinksToSuccessors <em>Links To Successors</em>}</li>
  *   <li>{@link simplepdl.WorkDefinition#getName <em>Name</em>}</li>
- *   <li>{@link simplepdl.WorkDefinition#getGestionressource <em>Gestionressource</em>}</li>
+ *   <li>{@link simplepdl.WorkDefinition#getGestionressources <em>Gestionressources</em>}</li>
  * </ul>
  *
  * @see simplepdl.SimplepdlPackage#getWorkDefinition()
@@ -75,15 +75,15 @@ public interface WorkDefinition extends ProcessElement {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Gestionressource</b></em>' containment reference list.
-	 * The list contents are of type {@link simplepdl.GestionRessources}.
+	 * Returns the value of the '<em><b>Gestionressources</b></em>' reference list.
+	 * The list contents are of type {@link simplepdl.GestionRessource}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Gestionressource</em>' containment reference list.
-	 * @see simplepdl.SimplepdlPackage#getWorkDefinition_Gestionressource()
-	 * @model containment="true"
+	 * @return the value of the '<em>Gestionressources</em>' reference list.
+	 * @see simplepdl.SimplepdlPackage#getWorkDefinition_Gestionressources()
+	 * @model
 	 * @generated
 	 */
-	EList<GestionRessources> getGestionressource();
+	EList<GestionRessource> getGestionressources();
 
 } // WorkDefinition

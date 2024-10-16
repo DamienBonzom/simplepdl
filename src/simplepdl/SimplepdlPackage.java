@@ -187,13 +187,13 @@ public interface SimplepdlPackage extends EPackage {
 	int WORK_DEFINITION__NAME = PROCESS_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Gestionressource</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Gestionressources</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_DEFINITION__GESTIONRESSOURCE = PROCESS_ELEMENT_FEATURE_COUNT + 3;
+	int WORK_DEFINITION__GESTIONRESSOURCES = PROCESS_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Work Definition</em>' class.
@@ -333,14 +333,14 @@ public interface SimplepdlPackage extends EPackage {
 	int GUIDANCE_OPERATION_COUNT = PROCESS_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link simplepdl.impl.GestionRessourcesImpl <em>Gestion Ressources</em>}' class.
+	 * The meta object id for the '{@link simplepdl.impl.GestionRessourceImpl <em>Gestion Ressource</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see simplepdl.impl.GestionRessourcesImpl
-	 * @see simplepdl.impl.SimplepdlPackageImpl#getGestionRessources()
+	 * @see simplepdl.impl.GestionRessourceImpl
+	 * @see simplepdl.impl.SimplepdlPackageImpl#getGestionRessource()
 	 * @generated
 	 */
-	int GESTION_RESSOURCES = 5;
+	int GESTION_RESSOURCE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Process</b></em>' reference.
@@ -349,7 +349,7 @@ public interface SimplepdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GESTION_RESSOURCES__PROCESS = PROCESS_ELEMENT__PROCESS;
+	int GESTION_RESSOURCE__PROCESS = PROCESS_ELEMENT__PROCESS;
 
 	/**
 	 * The feature id for the '<em><b>Quantite</b></em>' attribute.
@@ -358,16 +358,16 @@ public interface SimplepdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GESTION_RESSOURCES__QUANTITE = PROCESS_ELEMENT_FEATURE_COUNT + 0;
+	int GESTION_RESSOURCE__QUANTITE = PROCESS_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Ressources</b></em>' reference.
+	 * The feature id for the '<em><b>Ressource</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GESTION_RESSOURCES__RESSOURCES = PROCESS_ELEMENT_FEATURE_COUNT + 1;
+	int GESTION_RESSOURCE__RESSOURCE = PROCESS_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Utilisee</b></em>' attribute.
@@ -376,25 +376,25 @@ public interface SimplepdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GESTION_RESSOURCES__UTILISEE = PROCESS_ELEMENT_FEATURE_COUNT + 2;
+	int GESTION_RESSOURCE__UTILISEE = PROCESS_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Gestion Ressources</em>' class.
+	 * The number of structural features of the '<em>Gestion Ressource</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GESTION_RESSOURCES_FEATURE_COUNT = PROCESS_ELEMENT_FEATURE_COUNT + 3;
+	int GESTION_RESSOURCE_FEATURE_COUNT = PROCESS_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of operations of the '<em>Gestion Ressources</em>' class.
+	 * The number of operations of the '<em>Gestion Ressource</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GESTION_RESSOURCES_OPERATION_COUNT = PROCESS_ELEMENT_OPERATION_COUNT + 0;
+	int GESTION_RESSOURCE_OPERATION_COUNT = PROCESS_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link simplepdl.impl.RessourceImpl <em>Ressource</em>}' class.
@@ -538,15 +538,15 @@ public interface SimplepdlPackage extends EPackage {
 	EAttribute getWorkDefinition_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link simplepdl.WorkDefinition#getGestionressource <em>Gestionressource</em>}'.
+	 * Returns the meta object for the reference list '{@link simplepdl.WorkDefinition#getGestionressources <em>Gestionressources</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Gestionressource</em>'.
-	 * @see simplepdl.WorkDefinition#getGestionressource()
+	 * @return the meta object for the reference list '<em>Gestionressources</em>'.
+	 * @see simplepdl.WorkDefinition#getGestionressources()
 	 * @see #getWorkDefinition()
 	 * @generated
 	 */
-	EReference getWorkDefinition_Gestionressource();
+	EReference getWorkDefinition_Gestionressources();
 
 	/**
 	 * Returns the meta object for class '{@link simplepdl.WorkSequence <em>Work Sequence</em>}'.
@@ -645,47 +645,47 @@ public interface SimplepdlPackage extends EPackage {
 	EReference getGuidance_Elements();
 
 	/**
-	 * Returns the meta object for class '{@link simplepdl.GestionRessources <em>Gestion Ressources</em>}'.
+	 * Returns the meta object for class '{@link simplepdl.GestionRessource <em>Gestion Ressource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Gestion Ressources</em>'.
-	 * @see simplepdl.GestionRessources
+	 * @return the meta object for class '<em>Gestion Ressource</em>'.
+	 * @see simplepdl.GestionRessource
 	 * @generated
 	 */
-	EClass getGestionRessources();
+	EClass getGestionRessource();
 
 	/**
-	 * Returns the meta object for the attribute '{@link simplepdl.GestionRessources#getQuantite <em>Quantite</em>}'.
+	 * Returns the meta object for the attribute '{@link simplepdl.GestionRessource#getQuantite <em>Quantite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Quantite</em>'.
-	 * @see simplepdl.GestionRessources#getQuantite()
-	 * @see #getGestionRessources()
+	 * @see simplepdl.GestionRessource#getQuantite()
+	 * @see #getGestionRessource()
 	 * @generated
 	 */
-	EAttribute getGestionRessources_Quantite();
+	EAttribute getGestionRessource_Quantite();
 
 	/**
-	 * Returns the meta object for the reference '{@link simplepdl.GestionRessources#getRessources <em>Ressources</em>}'.
+	 * Returns the meta object for the reference '{@link simplepdl.GestionRessource#getRessource <em>Ressource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Ressources</em>'.
-	 * @see simplepdl.GestionRessources#getRessources()
-	 * @see #getGestionRessources()
+	 * @return the meta object for the reference '<em>Ressource</em>'.
+	 * @see simplepdl.GestionRessource#getRessource()
+	 * @see #getGestionRessource()
 	 * @generated
 	 */
-	EReference getGestionRessources_Ressources();
+	EReference getGestionRessource_Ressource();
 
 	/**
-	 * Returns the meta object for the attribute '{@link simplepdl.GestionRessources#isUtilisee <em>Utilisee</em>}'.
+	 * Returns the meta object for the attribute '{@link simplepdl.GestionRessource#isUtilisee <em>Utilisee</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Utilisee</em>'.
-	 * @see simplepdl.GestionRessources#isUtilisee()
-	 * @see #getGestionRessources()
+	 * @see simplepdl.GestionRessource#isUtilisee()
+	 * @see #getGestionRessource()
 	 * @generated
 	 */
-	EAttribute getGestionRessources_Utilisee();
+	EAttribute getGestionRessource_Utilisee();
 
 	/**
 	 * Returns the meta object for class '{@link simplepdl.Ressource <em>Ressource</em>}'.
@@ -813,12 +813,12 @@ public interface SimplepdlPackage extends EPackage {
 		EAttribute WORK_DEFINITION__NAME = eINSTANCE.getWorkDefinition_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Gestionressource</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Gestionressources</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference WORK_DEFINITION__GESTIONRESSOURCE = eINSTANCE.getWorkDefinition_Gestionressource();
+		EReference WORK_DEFINITION__GESTIONRESSOURCES = eINSTANCE.getWorkDefinition_Gestionressources();
 
 		/**
 		 * The meta object literal for the '{@link simplepdl.impl.WorkSequenceImpl <em>Work Sequence</em>}' class.
@@ -899,14 +899,14 @@ public interface SimplepdlPackage extends EPackage {
 		EReference GUIDANCE__ELEMENTS = eINSTANCE.getGuidance_Elements();
 
 		/**
-		 * The meta object literal for the '{@link simplepdl.impl.GestionRessourcesImpl <em>Gestion Ressources</em>}' class.
+		 * The meta object literal for the '{@link simplepdl.impl.GestionRessourceImpl <em>Gestion Ressource</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see simplepdl.impl.GestionRessourcesImpl
-		 * @see simplepdl.impl.SimplepdlPackageImpl#getGestionRessources()
+		 * @see simplepdl.impl.GestionRessourceImpl
+		 * @see simplepdl.impl.SimplepdlPackageImpl#getGestionRessource()
 		 * @generated
 		 */
-		EClass GESTION_RESSOURCES = eINSTANCE.getGestionRessources();
+		EClass GESTION_RESSOURCE = eINSTANCE.getGestionRessource();
 
 		/**
 		 * The meta object literal for the '<em><b>Quantite</b></em>' attribute feature.
@@ -914,15 +914,15 @@ public interface SimplepdlPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GESTION_RESSOURCES__QUANTITE = eINSTANCE.getGestionRessources_Quantite();
+		EAttribute GESTION_RESSOURCE__QUANTITE = eINSTANCE.getGestionRessource_Quantite();
 
 		/**
-		 * The meta object literal for the '<em><b>Ressources</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Ressource</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GESTION_RESSOURCES__RESSOURCES = eINSTANCE.getGestionRessources_Ressources();
+		EReference GESTION_RESSOURCE__RESSOURCE = eINSTANCE.getGestionRessource_Ressource();
 
 		/**
 		 * The meta object literal for the '<em><b>Utilisee</b></em>' attribute feature.
@@ -930,7 +930,7 @@ public interface SimplepdlPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GESTION_RESSOURCES__UTILISEE = eINSTANCE.getGestionRessources_Utilisee();
+		EAttribute GESTION_RESSOURCE__UTILISEE = eINSTANCE.getGestionRessource_Utilisee();
 
 		/**
 		 * The meta object literal for the '{@link simplepdl.impl.RessourceImpl <em>Ressource</em>}' class.

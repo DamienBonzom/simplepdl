@@ -3,7 +3,7 @@ package simplepdl.validation;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 
-import simplepdl.GestionRessources;
+import simplepdl.GestionRessource;
 import simplepdl.Guidance;
 import simplepdl.ProcessElement;
 import simplepdl.Ressource;
@@ -166,7 +166,7 @@ public class SimplePDLValidator extends SimplepdlSwitch<Boolean> {
 	 * vers les classes parentes, le cas échéant)
 	 */
 	@Override
-	public Boolean caseGestionRessources(GestionRessources object) {
+	public Boolean caseGestionRessource(GestionRessource object) {
 		//contrainte sur la quantite de ressources utilisées
 		this.result.recordIfFailed(
 				object.getQuantite() > 0, 
@@ -175,7 +175,7 @@ public class SimplePDLValidator extends SimplepdlSwitch<Boolean> {
 		
 		//contrainte sur la quantite de ressources utilisées
 				this.result.recordIfFailed(
-						object.getQuantite() <= object.getRessources().getQuantite(), 
+						object.getQuantite() <= object.getRessource().getQuantite(), 
 						object, 
 						"La quantité demandé est supérieure à la quantité maximale");
 		
@@ -212,7 +212,7 @@ public class SimplePDLValidator extends SimplepdlSwitch<Boolean> {
 				"Le nom de la ressource (" + object.getName() + ") n'est pas unique");
 		
 		System.out.println(object.getProcess().getProcessElements().stream()
-				.filter(p -> p.eClass().getClassifierID() == SimplepdlPackage.GESTION_RESSOURCES)
+				.filter(p -> p.eClass().getClassifierID() == SimplepdlPackage.GESTION_RESSOURCE)
 				.count());
 		
 		System.out.println(object.getProcess().getProcessElements().stream()
@@ -221,9 +221,9 @@ public class SimplePDLValidator extends SimplepdlSwitch<Boolean> {
 		
 		this.result.recordIfFailed(
 				object.getProcess().getProcessElements().stream()
-					.filter(p -> p.eClass().getClassifierID() == SimplepdlPackage.GESTION_RESSOURCES)
-					.filter(g -> ((GestionRessources) g).getRessources().getName() == object.getName() && ((GestionRessources) g).isUtilisee())
-					.mapToInt(g -> ((GestionRessources) g).getQuantite()).sum() <= object.getQuantite(),
+					.filter(p -> p.eClass().getClassifierID() == SimplepdlPackage.GESTION_RESSOURCE)
+					.filter(g -> ((GestionRessource) g).getRessource().getName() == object.getName() && ((GestionRessource) g).isUtilisee())
+					.mapToInt(g -> ((GestionRessource) g).getQuantite()).sum() <= object.getQuantite(),
 				object, 
 				"La quantité utilisée totale doit être inférieure à la quantité globale");
 		

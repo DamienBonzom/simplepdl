@@ -13,12 +13,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import simplepdl.GestionRessources;
+import simplepdl.GestionRessource;
 import simplepdl.SimplepdlPackage;
 import simplepdl.WorkDefinition;
 import simplepdl.WorkSequence;
@@ -34,7 +33,7 @@ import simplepdl.WorkSequence;
  *   <li>{@link simplepdl.impl.WorkDefinitionImpl#getLinksToPredecessors <em>Links To Predecessors</em>}</li>
  *   <li>{@link simplepdl.impl.WorkDefinitionImpl#getLinksToSuccessors <em>Links To Successors</em>}</li>
  *   <li>{@link simplepdl.impl.WorkDefinitionImpl#getName <em>Name</em>}</li>
- *   <li>{@link simplepdl.impl.WorkDefinitionImpl#getGestionressource <em>Gestionressource</em>}</li>
+ *   <li>{@link simplepdl.impl.WorkDefinitionImpl#getGestionressources <em>Gestionressources</em>}</li>
  * </ul>
  *
  * @generated
@@ -81,14 +80,14 @@ public class WorkDefinitionImpl extends ProcessElementImpl implements WorkDefini
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getGestionressource() <em>Gestionressource</em>}' containment reference list.
+	 * The cached value of the '{@link #getGestionressources() <em>Gestionressources</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGestionressource()
+	 * @see #getGestionressources()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GestionRessources> gestionressource;
+	protected EList<GestionRessource> gestionressources;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -164,11 +163,11 @@ public class WorkDefinitionImpl extends ProcessElementImpl implements WorkDefini
 	 * @generated
 	 */
 	@Override
-	public EList<GestionRessources> getGestionressource() {
-		if (gestionressource == null) {
-			gestionressource = new EObjectContainmentEList<GestionRessources>(GestionRessources.class, this, SimplepdlPackage.WORK_DEFINITION__GESTIONRESSOURCE);
+	public EList<GestionRessource> getGestionressources() {
+		if (gestionressources == null) {
+			gestionressources = new EObjectResolvingEList<GestionRessource>(GestionRessource.class, this, SimplepdlPackage.WORK_DEFINITION__GESTIONRESSOURCES);
 		}
-		return gestionressource;
+		return gestionressources;
 	}
 
 	/**
@@ -200,8 +199,6 @@ public class WorkDefinitionImpl extends ProcessElementImpl implements WorkDefini
 				return ((InternalEList<?>)getLinksToPredecessors()).basicRemove(otherEnd, msgs);
 			case SimplepdlPackage.WORK_DEFINITION__LINKS_TO_SUCCESSORS:
 				return ((InternalEList<?>)getLinksToSuccessors()).basicRemove(otherEnd, msgs);
-			case SimplepdlPackage.WORK_DEFINITION__GESTIONRESSOURCE:
-				return ((InternalEList<?>)getGestionressource()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -220,8 +217,8 @@ public class WorkDefinitionImpl extends ProcessElementImpl implements WorkDefini
 				return getLinksToSuccessors();
 			case SimplepdlPackage.WORK_DEFINITION__NAME:
 				return getName();
-			case SimplepdlPackage.WORK_DEFINITION__GESTIONRESSOURCE:
-				return getGestionressource();
+			case SimplepdlPackage.WORK_DEFINITION__GESTIONRESSOURCES:
+				return getGestionressources();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -246,9 +243,9 @@ public class WorkDefinitionImpl extends ProcessElementImpl implements WorkDefini
 			case SimplepdlPackage.WORK_DEFINITION__NAME:
 				setName((String)newValue);
 				return;
-			case SimplepdlPackage.WORK_DEFINITION__GESTIONRESSOURCE:
-				getGestionressource().clear();
-				getGestionressource().addAll((Collection<? extends GestionRessources>)newValue);
+			case SimplepdlPackage.WORK_DEFINITION__GESTIONRESSOURCES:
+				getGestionressources().clear();
+				getGestionressources().addAll((Collection<? extends GestionRessource>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -271,8 +268,8 @@ public class WorkDefinitionImpl extends ProcessElementImpl implements WorkDefini
 			case SimplepdlPackage.WORK_DEFINITION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SimplepdlPackage.WORK_DEFINITION__GESTIONRESSOURCE:
-				getGestionressource().clear();
+			case SimplepdlPackage.WORK_DEFINITION__GESTIONRESSOURCES:
+				getGestionressources().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -292,8 +289,8 @@ public class WorkDefinitionImpl extends ProcessElementImpl implements WorkDefini
 				return linksToSuccessors != null && !linksToSuccessors.isEmpty();
 			case SimplepdlPackage.WORK_DEFINITION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SimplepdlPackage.WORK_DEFINITION__GESTIONRESSOURCE:
-				return gestionressource != null && !gestionressource.isEmpty();
+			case SimplepdlPackage.WORK_DEFINITION__GESTIONRESSOURCES:
+				return gestionressources != null && !gestionressources.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

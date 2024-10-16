@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import simplepdl.GestionRessources;
+import simplepdl.GestionRessource;
 import simplepdl.Guidance;
 import simplepdl.ProcessElement;
 import simplepdl.Ressource;
@@ -105,10 +105,10 @@ public class SimplepdlSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SimplepdlPackage.GESTION_RESSOURCES: {
-				GestionRessources gestionRessources = (GestionRessources)theEObject;
-				T result = caseGestionRessources(gestionRessources);
-				if (result == null) result = caseProcessElement(gestionRessources);
+			case SimplepdlPackage.GESTION_RESSOURCE: {
+				GestionRessource gestionRessource = (GestionRessource)theEObject;
+				T result = caseGestionRessource(gestionRessource);
+				if (result == null) result = caseProcessElement(gestionRessource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -199,17 +199,17 @@ public class SimplepdlSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Gestion Ressources</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Gestion Ressource</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Gestion Ressources</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Gestion Ressource</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGestionRessources(GestionRessources object) {
+	public T caseGestionRessource(GestionRessource object) {
 		return null;
 	}
 

@@ -4,31 +4,31 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:simplepdl="http://simplepdl"
-    name="process">
+    name="exemple">
   <processElements
       xsi:type="simplepdl:WorkDefinition"
       process="/"
-      linksToSuccessors="//@processElements.3"
+      linksToSuccessors="//@processElements.2"
       name="A"
-      gestionressource="//@processElements.4"/>
+      gestionressources="//@processElements.3"/>
   <processElements
       xsi:type="simplepdl:WorkDefinition"
       process="/"
-      linksToPredecessors="//@processElements.3"
+      linksToPredecessors="//@processElements.2"
       name="B"/>
-  <processElements
-      xsi:type="simplepdl:Ressource"
-      process="/"
-      name="Ordi"
-      quantite="10"/>
   <processElements
       xsi:type="simplepdl:WorkSequence"
       process="/"
       predecessor="//@processElements.0"
       successor="//@processElements.1"/>
   <processElements
-      xsi:type="simplepdl:GestionRessources"
+      xsi:type="simplepdl:GestionRessource"
       process="/"
       quantite="5"
-      ressources="//@processElements.2"/>
+      ressource="//@processElements.4"/>
+  <processElements
+      xsi:type="simplepdl:Ressource"
+      process="/"
+      name="Ordinateurs"
+      quantite="10"/>
 </simplepdl:Process>

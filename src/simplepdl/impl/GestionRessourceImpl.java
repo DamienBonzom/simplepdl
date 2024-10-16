@@ -3,30 +3,32 @@
 package simplepdl.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import simplepdl.GestionRessources;
+
+import simplepdl.GestionRessource;
 import simplepdl.Ressource;
 import simplepdl.SimplepdlPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Gestion Ressources</b></em>'.
+ * An implementation of the model object '<em><b>Gestion Ressource</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link simplepdl.impl.GestionRessourcesImpl#getQuantite <em>Quantite</em>}</li>
- *   <li>{@link simplepdl.impl.GestionRessourcesImpl#getRessources <em>Ressources</em>}</li>
- *   <li>{@link simplepdl.impl.GestionRessourcesImpl#isUtilisee <em>Utilisee</em>}</li>
+ *   <li>{@link simplepdl.impl.GestionRessourceImpl#getQuantite <em>Quantite</em>}</li>
+ *   <li>{@link simplepdl.impl.GestionRessourceImpl#getRessource <em>Ressource</em>}</li>
+ *   <li>{@link simplepdl.impl.GestionRessourceImpl#isUtilisee <em>Utilisee</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GestionRessourcesImpl extends ProcessElementImpl implements GestionRessources {
+public class GestionRessourceImpl extends ProcessElementImpl implements GestionRessource {
 	/**
 	 * The default value of the '{@link #getQuantite() <em>Quantite</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -48,14 +50,14 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 	protected int quantite = QUANTITE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRessources() <em>Ressources</em>}' reference.
+	 * The cached value of the '{@link #getRessource() <em>Ressource</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRessources()
+	 * @see #getRessource()
 	 * @generated
 	 * @ordered
 	 */
-	protected Ressource ressources;
+	protected Ressource ressource;
 
 	/**
 	 * The default value of the '{@link #isUtilisee() <em>Utilisee</em>}' attribute.
@@ -82,7 +84,7 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GestionRessourcesImpl() {
+	protected GestionRessourceImpl() {
 		super();
 	}
 
@@ -93,7 +95,7 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SimplepdlPackage.Literals.GESTION_RESSOURCES;
+		return SimplepdlPackage.Literals.GESTION_RESSOURCE;
 	}
 
 	/**
@@ -116,7 +118,7 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 		int oldQuantite = quantite;
 		quantite = newQuantite;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SimplepdlPackage.GESTION_RESSOURCES__QUANTITE, oldQuantite, quantite));
+			eNotify(new ENotificationImpl(this, Notification.SET, SimplepdlPackage.GESTION_RESSOURCE__QUANTITE, oldQuantite, quantite));
 	}
 
 	/**
@@ -125,16 +127,16 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 	 * @generated
 	 */
 	@Override
-	public Ressource getRessources() {
-		if (ressources != null && ressources.eIsProxy()) {
-			InternalEObject oldRessources = (InternalEObject)ressources;
-			ressources = (Ressource)eResolveProxy(oldRessources);
-			if (ressources != oldRessources) {
+	public Ressource getRessource() {
+		if (ressource != null && ressource.eIsProxy()) {
+			InternalEObject oldRessource = (InternalEObject)ressource;
+			ressource = (Ressource)eResolveProxy(oldRessource);
+			if (ressource != oldRessource) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SimplepdlPackage.GESTION_RESSOURCES__RESSOURCES, oldRessources, ressources));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SimplepdlPackage.GESTION_RESSOURCE__RESSOURCE, oldRessource, ressource));
 			}
 		}
-		return ressources;
+		return ressource;
 	}
 
 	/**
@@ -142,8 +144,8 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Ressource basicGetRessources() {
-		return ressources;
+	public Ressource basicGetRessource() {
+		return ressource;
 	}
 
 	/**
@@ -152,11 +154,11 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 	 * @generated
 	 */
 	@Override
-	public void setRessources(Ressource newRessources) {
-		Ressource oldRessources = ressources;
-		ressources = newRessources;
+	public void setRessource(Ressource newRessource) {
+		Ressource oldRessource = ressource;
+		ressource = newRessource;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SimplepdlPackage.GESTION_RESSOURCES__RESSOURCES, oldRessources, ressources));
+			eNotify(new ENotificationImpl(this, Notification.SET, SimplepdlPackage.GESTION_RESSOURCE__RESSOURCE, oldRessource, ressource));
 	}
 
 	/**
@@ -179,7 +181,7 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 		boolean oldUtilisee = utilisee;
 		utilisee = newUtilisee;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SimplepdlPackage.GESTION_RESSOURCES__UTILISEE, oldUtilisee, utilisee));
+			eNotify(new ENotificationImpl(this, Notification.SET, SimplepdlPackage.GESTION_RESSOURCE__UTILISEE, oldUtilisee, utilisee));
 	}
 
 	/**
@@ -190,12 +192,12 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SimplepdlPackage.GESTION_RESSOURCES__QUANTITE:
+			case SimplepdlPackage.GESTION_RESSOURCE__QUANTITE:
 				return getQuantite();
-			case SimplepdlPackage.GESTION_RESSOURCES__RESSOURCES:
-				if (resolve) return getRessources();
-				return basicGetRessources();
-			case SimplepdlPackage.GESTION_RESSOURCES__UTILISEE:
+			case SimplepdlPackage.GESTION_RESSOURCE__RESSOURCE:
+				if (resolve) return getRessource();
+				return basicGetRessource();
+			case SimplepdlPackage.GESTION_RESSOURCE__UTILISEE:
 				return isUtilisee();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -206,17 +208,16 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SimplepdlPackage.GESTION_RESSOURCES__QUANTITE:
+			case SimplepdlPackage.GESTION_RESSOURCE__QUANTITE:
 				setQuantite((Integer)newValue);
 				return;
-			case SimplepdlPackage.GESTION_RESSOURCES__RESSOURCES:
-				setRessources((Ressource)newValue);
+			case SimplepdlPackage.GESTION_RESSOURCE__RESSOURCE:
+				setRessource((Ressource)newValue);
 				return;
-			case SimplepdlPackage.GESTION_RESSOURCES__UTILISEE:
+			case SimplepdlPackage.GESTION_RESSOURCE__UTILISEE:
 				setUtilisee((Boolean)newValue);
 				return;
 		}
@@ -231,13 +232,13 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SimplepdlPackage.GESTION_RESSOURCES__QUANTITE:
+			case SimplepdlPackage.GESTION_RESSOURCE__QUANTITE:
 				setQuantite(QUANTITE_EDEFAULT);
 				return;
-			case SimplepdlPackage.GESTION_RESSOURCES__RESSOURCES:
-				setRessources((Ressource)null);
+			case SimplepdlPackage.GESTION_RESSOURCE__RESSOURCE:
+				setRessource((Ressource)null);
 				return;
-			case SimplepdlPackage.GESTION_RESSOURCES__UTILISEE:
+			case SimplepdlPackage.GESTION_RESSOURCE__UTILISEE:
 				setUtilisee(UTILISEE_EDEFAULT);
 				return;
 		}
@@ -252,11 +253,11 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SimplepdlPackage.GESTION_RESSOURCES__QUANTITE:
+			case SimplepdlPackage.GESTION_RESSOURCE__QUANTITE:
 				return quantite != QUANTITE_EDEFAULT;
-			case SimplepdlPackage.GESTION_RESSOURCES__RESSOURCES:
-				return ressources != null;
-			case SimplepdlPackage.GESTION_RESSOURCES__UTILISEE:
+			case SimplepdlPackage.GESTION_RESSOURCE__RESSOURCE:
+				return ressource != null;
+			case SimplepdlPackage.GESTION_RESSOURCE__UTILISEE:
 				return utilisee != UTILISEE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -280,4 +281,4 @@ public class GestionRessourcesImpl extends ProcessElementImpl implements Gestion
 		return result.toString();
 	}
 
-} //GestionRessourcesImpl
+} //GestionRessourceImpl

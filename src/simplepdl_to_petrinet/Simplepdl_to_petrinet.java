@@ -23,7 +23,7 @@ import petrinet.Transition;
 import petrinet.Zone;
 import petrinet.impl.PetrinetPackageImpl;
 import petrinet.impl.ZoneImpl;
-import simplepdl.GestionRessources;
+import simplepdl.GestionRessource;
 import simplepdl.Process;
 import simplepdl.Ressource;
 import simplepdl.SimplepdlFactory;
@@ -58,7 +58,7 @@ public class Simplepdl_to_petrinet {
 		ResourceSet resSet = new ResourceSetImpl();
 
 		// Charger la ressource (notre modÃ¨le)
-		URI modelURI = URI.createURI("models/validation.xmi");
+		URI modelURI = URI.createURI("models/exemple.xmi");
 		Resource resource = resSet.getResource(modelURI, true);
 						
 		// RÃ©cupÃ©rer le premier Ã©lÃ©ment du modÃ¨le (Ã©lÃ©ment racine)
@@ -78,7 +78,7 @@ public class Simplepdl_to_petrinet {
 		ResourceSet resSet_petrinet = new ResourceSetImpl();
 
 		// DÃ©finir la ressource (le modÃ¨le)
-		URI modelURI_petrinet = URI.createURI("models/transformation_reseau_petri2.xmi");
+		URI modelURI_petrinet = URI.createURI("models/transformationJAVA.xmi");
 		resource_petrinet = resSet_petrinet.createResource(modelURI_petrinet);
 						
 		// La fabrique pour fabriquer les Ã©lÃ©ments de SimplePDL
@@ -104,10 +104,10 @@ public class Simplepdl_to_petrinet {
 	}
 	
 	private void gestion_to_lien(WorkDefinition wd) {
-		for(GestionRessources gr : wd.getGestionressource()) {
+		for(GestionRessource gr : wd.getGestionressources()) {
 			Transition transi_commencer = (Transition) association.get(wd).get(2);
 			Transition transi_finir = (Transition) association.get(wd).get(3);
-			Place place_ressource = ressource_place.get(gr.getRessources());
+			Place place_ressource = ressource_place.get(gr.getRessource());
 			init_lien(place_ressource, transi_commencer, false, gr.getQuantite());
 			init_lien(transi_finir, place_ressource, false, gr.getQuantite());
 		}
