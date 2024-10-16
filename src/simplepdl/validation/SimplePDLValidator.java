@@ -211,14 +211,6 @@ public class SimplePDLValidator extends SimplepdlSwitch<Boolean> {
 				object, 
 				"Le nom de la ressource (" + object.getName() + ") n'est pas unique");
 		
-		System.out.println(object.getProcess().getProcessElements().stream()
-				.filter(p -> p.eClass().getClassifierID() == SimplepdlPackage.GESTION_RESSOURCE)
-				.count());
-		
-		System.out.println(object.getProcess().getProcessElements().stream()
-				.filter(p -> p.eClass().getClassifierID() == SimplepdlPackage.RESSOURCE)
-				.count());
-		
 		this.result.recordIfFailed(
 				object.getProcess().getProcessElements().stream()
 					.filter(p -> p.eClass().getClassifierID() == SimplepdlPackage.GESTION_RESSOURCE)

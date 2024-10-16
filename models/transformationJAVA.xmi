@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<petrinet:Petri xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petrinet="http://petrinet" nom="Mon premier reseau de petri">
+<petrinet:Petri xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petrinet="http://petrinet" nom="exempleToPetri_JAVA">
   <elements xsi:type="petrinet:Place" petri="/" predecesseurs="//@elements.13" successeurs="//@elements.12" nom_zone="StockOrdinateurs" nbr_jetons="10"/>
   <elements xsi:type="petrinet:Place" petri="/" successeurs="//@elements.7" nom_zone="Init_A" nbr_jetons="1"/>
   <elements xsi:type="petrinet:Place" petri="/" predecesseurs="//@elements.8" successeurs="//@elements.9" nom_zone="Running_A"/>

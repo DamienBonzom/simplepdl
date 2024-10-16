@@ -86,7 +86,7 @@ public class Simplepdl_to_petrinet {
 
 		// CrÃ©er un Ã©lÃ©ment Process
 		petrinet = myFactory_petrinet.createPetri();
-		petrinet.setNom("Mon premier reseau de petri");
+		petrinet.setNom(process.getName()+"ToPetri_JAVA");
 						
 		// Ajouter le Process dans le modÃ¨le
 		resource_petrinet.getContents().add(petrinet);
