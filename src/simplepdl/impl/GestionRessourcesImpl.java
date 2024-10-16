@@ -7,8 +7,6 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import simplepdl.GestionRessources;
 import simplepdl.Ressource;
 import simplepdl.SimplepdlPackage;
@@ -28,7 +26,7 @@ import simplepdl.SimplepdlPackage;
  *
  * @generated
  */
-public class GestionRessourcesImpl extends MinimalEObjectImpl.Container implements GestionRessources {
+public class GestionRessourcesImpl extends ProcessElementImpl implements GestionRessources {
 	/**
 	 * The default value of the '{@link #getQuantite() <em>Quantite</em>}' attribute.
 	 * <!-- begin-user-doc -->

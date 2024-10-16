@@ -9,7 +9,13 @@
       xsi:type="simplepdl:WorkDefinition"
       process="/"
       linksToSuccessors="//@processElements.3"
-      name="A1"/>
+      name="A1">
+    <gestionressource
+        process="/"
+        quantite="10"
+        ressources="//@processElements.5"
+        utilisee="true"/>
+  </processElements>
   <processElements
       xsi:type="simplepdl:WorkDefinition"
       process="/"
@@ -19,7 +25,13 @@
       xsi:type="simplepdl:WorkDefinition"
       process="/"
       linksToSuccessors="//@processElements.4"
-      name="A3"/>
+      name="A3">
+    <gestionressource
+        process="/"
+        quantite="1"
+        ressources="//@processElements.5"
+        utilisee="true"/>
+  </processElements>
   <processElements
       xsi:type="simplepdl:WorkSequence"
       process="/"
@@ -29,7 +41,12 @@
   <processElements
       xsi:type="simplepdl:WorkSequence"
       process="/"
-      linkType="finishToFinish"
+      linkType="finishToStart"
       predecessor="//@processElements.2"
       successor="//@processElements.1"/>
+  <processElements
+      xsi:type="simplepdl:Ressource"
+      process="/"
+      name="ordi"
+      quantite="5"/>
 </simplepdl:Process>

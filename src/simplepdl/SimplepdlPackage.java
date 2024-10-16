@@ -343,13 +343,22 @@ public interface SimplepdlPackage extends EPackage {
 	int GESTION_RESSOURCES = 5;
 
 	/**
+	 * The feature id for the '<em><b>Process</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GESTION_RESSOURCES__PROCESS = PROCESS_ELEMENT__PROCESS;
+
+	/**
 	 * The feature id for the '<em><b>Quantite</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GESTION_RESSOURCES__QUANTITE = 0;
+	int GESTION_RESSOURCES__QUANTITE = PROCESS_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Ressources</b></em>' reference.
@@ -358,7 +367,7 @@ public interface SimplepdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GESTION_RESSOURCES__RESSOURCES = 1;
+	int GESTION_RESSOURCES__RESSOURCES = PROCESS_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Utilisee</b></em>' attribute.
@@ -367,7 +376,7 @@ public interface SimplepdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GESTION_RESSOURCES__UTILISEE = 2;
+	int GESTION_RESSOURCES__UTILISEE = PROCESS_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Gestion Ressources</em>' class.
@@ -376,7 +385,7 @@ public interface SimplepdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GESTION_RESSOURCES_FEATURE_COUNT = 3;
+	int GESTION_RESSOURCES_FEATURE_COUNT = PROCESS_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Gestion Ressources</em>' class.
@@ -385,7 +394,7 @@ public interface SimplepdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GESTION_RESSOURCES_OPERATION_COUNT = 0;
+	int GESTION_RESSOURCES_OPERATION_COUNT = PROCESS_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link simplepdl.impl.RessourceImpl <em>Ressource</em>}' class.

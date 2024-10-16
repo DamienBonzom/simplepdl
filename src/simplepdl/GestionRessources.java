@@ -2,8 +2,6 @@
  */
 package simplepdl;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Gestion Ressources</b></em>'.
@@ -22,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface GestionRessources extends EObject {
+public interface GestionRessources extends ProcessElement {
 	/**
 	 * Returns the value of the '<em><b>Quantite</b></em>' attribute.
 	 * <!-- begin-user-doc -->

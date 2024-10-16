@@ -172,6 +172,14 @@ public class SimplePDLValidator extends SimplepdlSwitch<Boolean> {
 				object.getQuantite() > 0, 
 				object, 
 				"Une gestion de ressource doit gérer au minimum une ressource");
+		
+		//contrainte sur la quantite de ressources utilisées
+				this.result.recordIfFailed(
+						object.getQuantite() <= object.getRessources().getQuantite(), 
+						object, 
+						"La quantité demandé est supérieure à la quantité maximale");
+		
+				
 		return null;
 	}
 	
@@ -195,6 +203,30 @@ public class SimplePDLValidator extends SimplepdlSwitch<Boolean> {
 				object.getQuantite() > 0, 
 				object, 
 				"Une ressource ne peut pas être de quantité nulle");
+		
+		this.result.recordIfFailed(
+				object.getProcess().getProcessElements().stream()
+					.filter(p -> p.eClass().getClassifierID() == SimplepdlPackage.RESSOURCE)
+					.allMatch(pe -> (pe.equals(object) || !((Ressource) pe).getName().contains(object.getName()))),
+				object, 
+				"Le nom de la ressource (" + object.getName() + ") n'est pas unique");
+		
+		System.out.println(object.getProcess().getProcessElements().stream()
+				.filter(p -> p.eClass().getClassifierID() == SimplepdlPackage.GESTION_RESSOURCES)
+				.count());
+		
+		System.out.println(object.getProcess().getProcessElements().stream()
+				.filter(p -> p.eClass().getClassifierID() == SimplepdlPackage.RESSOURCE)
+				.count());
+		
+		this.result.recordIfFailed(
+				object.getProcess().getProcessElements().stream()
+					.filter(p -> p.eClass().getClassifierID() == SimplepdlPackage.GESTION_RESSOURCES)
+					.filter(g -> ((GestionRessources) g).getRessources().getName() == object.getName() && ((GestionRessources) g).isUtilisee())
+					.mapToInt(g -> ((GestionRessources) g).getQuantite()).sum() <= object.getQuantite(),
+				object, 
+				"La quantité utilisée totale doit être inférieure à la quantité globale");
+		
 		
 		return null;
 	}

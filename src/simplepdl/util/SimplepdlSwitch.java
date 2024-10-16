@@ -108,6 +108,7 @@ public class SimplepdlSwitch<T> extends Switch<T> {
 			case SimplepdlPackage.GESTION_RESSOURCES: {
 				GestionRessources gestionRessources = (GestionRessources)theEObject;
 				T result = caseGestionRessources(gestionRessources);
+				if (result == null) result = caseProcessElement(gestionRessources);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

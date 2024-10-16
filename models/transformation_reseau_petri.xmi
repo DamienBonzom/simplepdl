@@ -33,6 +33,6 @@
   <elements xsi:type="petrinet:Liens" petri="/" predecesseur="//@elements.23" successeur="//@elements.27"/>
   <elements xsi:type="petrinet:Liens" petri="/" predecesseur="//@elements.27" successeur="//@elements.24"/>
   <elements xsi:type="petrinet:Liens" petri="/" predecesseur="//@elements.26" successeur="//@elements.25"/>
-  <elements xsi:type="petrinet:Liens" petri="/" predecesseur="//@elements.3" successeur="//@elements.15" is_read_arc="true"/>
-  <elements xsi:type="petrinet:Liens" petri="/" predecesseur="//@elements.25" successeur="//@elements.15" is_read_arc="true"/>
+  <elements xsi:type="petrinet:Liens" petri="/" predecesseur="//@elements.2" successeur="//@elements.16" is_read_arc="true"/>
+  <elements xsi:type="petrinet:Liens" petri="/" predecesseur="//@elements.24" successeur="//@elements.16" is_read_arc="true"/>
 </petrinet:Petri>

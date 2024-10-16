@@ -37,9 +37,11 @@
     <genClasses ecoreClass="SimplePDL.ecore#//GestionRessources">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimplePDL.ecore#//GestionRessources/quantite"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SimplePDL.ecore#//GestionRessources/ressources"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimplePDL.ecore#//GestionRessources/utilisee"/>
     </genClasses>
     <genClasses ecoreClass="SimplePDL.ecore#//Ressource">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimplePDL.ecore#//Ressource/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimplePDL.ecore#//Ressource/quantite"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ASCII"?>
+<petrinet:Petri xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petrinet="http://petrinet" nom="Mon premier reseau de petri">
+  <elements xsi:type="petrinet:Place" petri="/" predecesseurs="//@elements.13" successeurs="//@elements.12" nom_zone="StockOrdi" nbr_jetons="10"/>
+  <elements xsi:type="petrinet:Place" petri="/" successeurs="//@elements.7" nom_zone="Init_A" nbr_jetons="1"/>
+  <elements xsi:type="petrinet:Place" petri="/" predecesseurs="//@elements.8" successeurs="//@elements.9" nom_zone="Running_A"/>
+  <elements xsi:type="petrinet:Place" petri="/" predecesseurs="//@elements.10" nom_zone="End_A"/>
+  <elements xsi:type="petrinet:Place" petri="/" predecesseurs="//@elements.11" successeurs="//@elements.25" nom_zone="HasStarted_A"/>
+  <elements xsi:type="petrinet:Transition" petri="/" predecesseurs="//@elements.7 //@elements.12" successeurs="//@elements.8 //@elements.11" nom_zone="Init_Run_A"/>
+  <elements xsi:type="petrinet:Transition" petri="/" predecesseurs="//@elements.9" successeurs="//@elements.10 //@elements.13" nom_zone="Run_End_A"/>
+  <elements xsi:type="petrinet:Lien" petri="/" predecesseur="//@elements.1" successeur="//@elements.5"/>
+  <elements xsi:type="petrinet:Lien" petri="/" predecesseur="//@elements.5" successeur="//@elements.2"/>
+  <elements xsi:type="petrinet:Lien" petri="/" predecesseur="//@elements.2" successeur="//@elements.6"/>
+  <elements xsi:type="petrinet:Lien" petri="/" predecesseur="//@elements.6" successeur="//@elements.3"/>
+  <elements xsi:type="petrinet:Lien" petri="/" predecesseur="//@elements.5" successeur="//@elements.4"/>
+  <elements xsi:type="petrinet:Lien" petri="/" predecesseur="//@elements.0" successeur="//@elements.5" poids="5"/>
+  <elements xsi:type="petrinet:Lien" petri="/" predecesseur="//@elements.6" successeur="//@elements.0" poids="5"/>
+  <elements xsi:type="petrinet:Place" petri="/" successeurs="//@elements.20" nom_zone="Init_B" nbr_jetons="1"/>
+  <elements xsi:type="petrinet:Place" petri="/" predecesseurs="//@elements.21" successeurs="//@elements.22" nom_zone="Running_B"/>
+  <elements xsi:type="petrinet:Place" petri="/" predecesseurs="//@elements.23" nom_zone="End_B"/>
+  <elements xsi:type="petrinet:Place" petri="/" predecesseurs="//@elements.24" nom_zone="HasStarted_B"/>
+  <elements xsi:type="petrinet:Transition" petri="/" predecesseurs="//@elements.20 //@elements.25" successeurs="//@elements.21 //@elements.24" nom_zone="Init_Run_B"/>
+  <elements xsi:type="petrinet:Transition" petri="/" predecesseurs="//@elements.22" successeurs="//@elements.23" nom_zone="Run_End_B"/>
+  <elements xsi:type="petrinet:Lien" petri="/" predecesseur="//@elements.14" successeur="//@elements.18"/>
+  <elements xsi:type="petrinet:Lien" petri="/" predecesseur="//@elements.18" successeur="//@elements.15"/>
+  <elements xsi:type="petrinet:Lien" petri="/" predecesseur="//@elements.15" successeur="//@elements.19"/>
+  <elements xsi:type="petrinet:Lien" petri="/" predecesseur="//@elements.19" successeur="//@elements.16"/>
+  <elements xsi:type="petrinet:Lien" petri="/" predecesseur="//@elements.18" successeur="//@elements.17"/>
+  <elements xsi:type="petrinet:Lien" petri="/" predecesseur="//@elements.4" successeur="//@elements.18" is_read_arc="true"/>
+</petrinet:Petri>
